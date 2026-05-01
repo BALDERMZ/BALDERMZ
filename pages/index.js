@@ -26,7 +26,7 @@ export default function Home() {
       <p>
         <button
           onClick={() => {
-            const shop = (document.getElementById('shopInput') as HTMLInputElement).value;
+            const shop = document.getElementById('shopInput').value;
             if (shop) {
               window.location.href = `/api/auth/authorize?shop=${shop}`;
             } else {
@@ -45,6 +45,27 @@ export default function Home() {
           }}
         >
           Conectar Tienda
+        </button>
+      </p>
+      
+      <p>
+        <button
+          onClick={() => {
+            window.location.href = '/dashboard';
+          }}
+          style={{
+            padding: '12px 30px',
+            backgroundColor: '#007bff',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            fontWeight: 'bold',
+            marginLeft: '10px'
+          }}
+        >
+          Ver Dashboard Demo
         </button>
       </p>
 

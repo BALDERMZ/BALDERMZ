@@ -28,7 +28,7 @@ async function optimizeProductDescription(
     const systemPrompt = getEcommercePrompt(productType, aggressiveness);
 
     const message = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-3-5-sonnet-20241022",
       max_tokens: 800,
       messages: [
         {
